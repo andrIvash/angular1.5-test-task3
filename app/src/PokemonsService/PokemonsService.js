@@ -20,7 +20,7 @@ angular
                     });
                 },
 
-                editPokemon: function(pokemonId, pokemonData) {
+                editPokemon: function(pokemonData) {
                     return $http({
                         method: 'PUT',
                         url: 'https://api.backendless.com/BEA07ECE-559D-4FD4-FFB0-E65451226000/EEBA8A85-B41E-A254-FF39-C244D94BF700/data/pokemons',

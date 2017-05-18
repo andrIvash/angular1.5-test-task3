@@ -9,7 +9,7 @@ pokemonApp.controller('EditPokemonCtrl', function($scope, PokemonsService) {
         $scope.editError = false;
         $scope.editSuccess = false;
 
-        PokemonsService.editPokemon(myPokemon.objectId, myPokemon).then(function successCallback(response) {
+        PokemonsService.editPokemon(myPokemon).then(function successCallback(response) {
 
             $scope.pokemon = {};
             $scope.pokemon = response.data.objectId;
