@@ -15,12 +15,15 @@ angular
                 createPokemon: function(pokemonData) {
                     return $http({
                         method: 'POST',
-                        url: 'https://api.backendless.com/v1/data/pokemon',
-                        headers: {
-                            "application-id": "4B730C92-F81E-236B-FFF0-6651FE882800",
-                            "secret-key": "CB6DE86C-6069-86C4-FF1C-9049D5AC9400"
+                        url: 'https://api.backendless.com/BEA07ECE-559D-4FD4-FFB0-E65451226000/EEBA8A85-B41E-A254-FF39-C244D94BF700/data/pokemons',
+                        data: pokemonData
+                    });
+                },
 
-                        },
+                editPokemon: function(pokemonId, pokemonData) {
+                    return $http({
+                        method: 'PUT',
+                        url: 'https://api.backendless.com/BEA07ECE-559D-4FD4-FFB0-E65451226000/EEBA8A85-B41E-A254-FF39-C244D94BF700/data/pokemons',
                         data: pokemonData
                     });
                 },
@@ -28,12 +31,8 @@ angular
                 deletePokemon: function(pokemonId) {
                     return $http({
                         method: 'DELETE',
-                        url: 'https://api.backendless.com/v1/data/pokemon/' + pokemonId,
-                        headers: {
-                            "application-id": "4B730C92-F81E-236B-FFF0-6651FE882800",
-                            "secret-key": "CB6DE86C-6069-86C4-FF1C-9049D5AC9400"
-
-                        }
+                        url: 'https://api.backendless.com/BEA07ECE-559D-4FD4-FFB0-E65451226000/EEBA8A85-B41E-A254-FF39-C244D94BF700/data/pokemons',
+                        data: {objectId: pokemonId}
                     });
                 }
 

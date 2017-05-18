@@ -27,4 +27,5 @@ pokemonApp.controller('PokemonDetailCtrl', function($scope, $routeParams, Pokemo
 
     }
 
+
 });
